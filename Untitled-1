@@ -1,0 +1,36 @@
+/*  Problem 3: Book → EBook
+Scenario:
+Base class Book
+title
+author
+constructor
+method displayBook()
+Child class EBook
+fileSize
+constructor (use super)
+method displayEBook()
+👉 Task:
+Print complete information of EBook.
+Use super keyword properly.*/
+
+import java.util.*;
+class Book{
+    String title;
+    String author;
+    public Book(String title,String author){
+        this.tittle = tittle;
+        this.author = author ;
+
+    }
+   void  displayBook(){
+    System.out.println("tittle of the book :"+ tittle );
+    System.out.println("author of the book :"+ author );
+   }
+
+}
+class Ebook extends Book{
+    public Ebook(String title,String author){
+        super( title, author);
+        
+    }
+}
