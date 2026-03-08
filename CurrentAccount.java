@@ -11,45 +11,35 @@ method showAccountDetails() */
 
 import java.util.*;
 class Account{
-    String accountHolder;
+    String accountholder;
     int balance ;
-    public Account(String accountHolder,int balance){
-
-        this.accountHolder=accountHolder;
+    public Account(String accountholder,int balance){
+        this.accountholder= accountholder;
         this.balance=balance;
     }
    void  showBalance(){
     System.out.println("balance:"+balance);
     }
-    void accountNumber(){
-        int accountNumber = 12345678;
-        System.out.println("account number is:"+accountNumber);
-    }
 }
 class CurrentAccount extends Account
 {
-    public CurrentAccount(String accountHolder,int balance){
-        super(accountHolder,balance);
+    public CurrentAccount(String accountholder,int balance){
+        super(accountholder,balance);
 
     }
-    void showAccountDetails() {
-        System.out.println(accountHolder);
-        super.accountNumber();
-         super.showBalance();
-        int overdraft = 100000;
-        System.out.println("overlimit"+overdraft);
+    void overdraftLimit(){
+        int overdraftLimit= 20000;
+        System.out.println("overdraft limit is:"+overdraftLimit);
 
     }
     public static void main(String[] args)
      {
         Scanner sc = new Scanner(System.in);
-
-        String accountHolder = sc.nextLine();
-       
+        String accountholder = sc.nextLine();
+        System.out.println(accountholder);
         int balance = sc.nextInt();
-       
-        CurrentAccount cc = new CurrentAccount(accountHolder,balance);
-        cc.showAccountDetails();
-        
+        System.out.println(balance );
+        CurrentAccount cc = new CurrentAccount(accountholder,balance);
+        cc.overdraftLimit();
     }
 }
